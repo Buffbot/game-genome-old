@@ -1,0 +1,1 @@
+GameGenome.ApplicationController = Ember.Controller.extend()
