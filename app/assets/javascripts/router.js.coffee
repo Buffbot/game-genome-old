@@ -1,3 +1,3 @@
-GameGenome.Router.map (match)->
-  # match('/').to('index')
-
+GameGenome.Router.map (match) ->
+  this.resource 'games', ->
+    this.route 'show', { path: ':game_id' }

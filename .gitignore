@@ -17,8 +17,3 @@
 
 # Ignore Sensitive Files
 /config/local_env.yml
-
-# Ignore Floobit
-.floo
-.flooignore
-.sublime-project

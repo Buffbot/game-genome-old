@@ -1,0 +1,6 @@
+h2 the index
+
+ul
+  each controller
+    linkTo 'games.show' this
+      = title

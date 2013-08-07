@@ -1,0 +1,89 @@
+$mobile_large: new-breakpoint(max-width 850px);
+$mobile_small: new-breakpoint(max-width 500px);
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($link_color, $hover_lighten_percent)
+  }
+}
+
+.header {
+  background: #333;
+  margin-bottom: 20px;
+
+  h2 {
+    @include span-columns(3);
+    font-family: 'Titillium Web', Helvetica, Arial, Verdana, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 11px;
+    a { color: $header_title; }
+  }
+
+  .search {
+    @include span-columns(4);
+    @include media($mobile_large) { @include span-columns(6); }
+    @include media($mobile_small) { @include span-columns(8); }
+
+    margin-top: 6px;
+    position: relative;
+
+    input {
+      background: $input_inactive_bg;
+      border: 0;
+      border-radius: 1px;
+      font-size: 13px;
+      height: 25px;
+      margin: 0 !important;
+      padding-left: 35px;
+      width: 100%;
+
+      &:focus {
+        background: $input_active_bg;
+
+        &+.icon-search {
+          opacity: .8
+        }
+      }
+    }
+
+    .icon-search {
+      color: $text_color;
+      left: 7px;
+      opacity: .4;
+      position: absolute;
+      top: 4px;
+    }
+  }
+
+  .avatar {
+    @include span-columns(1);
+    @include shift(4);
+
+    @include media($mobile_large) { @include shift(2); }
+    @include media($mobile_small) { @include shift(0); }
+
+    img { margin-top: 6px; }
+  }
+}
+
+.wrapper {
+  @include outer-container;
+  margin: 0 auto;
+}
+
+.boxart {
+  @include span-columns(3);
+  img { width: 100%;}
+
+}
