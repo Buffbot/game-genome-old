@@ -1,9 +1,0 @@
-.header
-  .wrapper
-    h2 
-      linkTo 'games' | Game Genome
-    .search
-      input type="text"
-      i.icon-search
-    .avatar
-      img height="28" width="28" src="https://secure.gravatar.com/avatar/e68bdae84b458045e9c576622ea1b4ce?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"

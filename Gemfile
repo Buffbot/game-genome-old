@@ -18,7 +18,6 @@ gem 'neat'
 # Ember
 gem 'ember-rails'
 gem 'ember-source'
-gem 'emblem-rails'
 
 group :doc do
   gem 'sdoc', require: false

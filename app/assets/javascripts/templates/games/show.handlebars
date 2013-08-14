@@ -1,0 +1,14 @@
+{{view Ember.Select 
+       contentBinding="controller.editions"
+       optionLabelPath="content.attributes.firstObject.value"
+       optionValuePath="content"
+       valueBinding="selectedEdition"}}
+
+{{#with selectedEdition}}
+  <h1>Game Name:</h1>
+  {{#if attributes.firstObject.value}}
+    <p>{{attributes.firstObject.value}}</p>
+  {{else}}
+    <p>{{../controller.default_edition.attributes.title}}
+  {{/if}}
+{{/with}}

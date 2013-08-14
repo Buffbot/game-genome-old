@@ -1,6 +1,0 @@
-with model
-  each game_editions
-    .boxart
-      img src=boxart_url
-    h1= title
-    p= synopsis

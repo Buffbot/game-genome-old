@@ -1,0 +1,7 @@
+<h2>The Index</h2>
+
+<ul>
+  {{#each controller}}
+    {{#linkTo 'games.show' this}}{{title}}{{/linkTo}}
+  {{/each}}
+</ul>

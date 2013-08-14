@@ -15,6 +15,12 @@ a {
   }
 }
 
+.wrapper {
+  @include outer-container;
+  margin: 0 auto;
+  padding: 6px 20px;
+}
+
 .header {
   background: #333;
   margin-bottom: 20px;
@@ -26,16 +32,13 @@ a {
     text-transform: uppercase;
     font-weight: 200;
     text-align: center;
-    padding-top: 11px;
+    padding-top: 6px;
     a { color: $header_title; }
   }
 
   .search {
-    @include span-columns(4);
-    @include media($mobile_large) { @include span-columns(6); }
-    @include media($mobile_small) { @include span-columns(8); }
+    @include span-columns(7);
 
-    margin-top: 6px;
     position: relative;
 
     input {
@@ -67,19 +70,14 @@ a {
   }
 
   .avatar {
-    @include span-columns(1);
-    @include shift(4);
+    @include span-columns(2);
 
-    @include media($mobile_large) { @include shift(2); }
-    @include media($mobile_small) { @include shift(0); }
-
-    img { margin-top: 6px; }
+    img { 
+      float: right;
+      height: 25px;
+      width: 25px;
+    }
   }
-}
-
-.wrapper {
-  @include outer-container;
-  margin: 0 auto;
 }
 
 .boxart {
